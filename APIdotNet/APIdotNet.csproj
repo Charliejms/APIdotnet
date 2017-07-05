@@ -7,6 +7,9 @@
   <ItemGroup>
     <Folder Include="wwwroot\" />
     <Folder Include="Models\" />
+    <Folder Include="V1\" />
+    <Folder Include="V1\Controllers\" />
+    <Folder Include="V1\Models\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,6 +20,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="1.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="1.0.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="V1\Models\EmptyCSSFile.css" />
+  </ItemGroup>
 </Project>
