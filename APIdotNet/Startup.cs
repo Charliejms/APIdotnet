@@ -34,7 +34,15 @@ namespace APIdotNet
 			//Register the Swagger generator, defining one or more Swagger documents
 			services.AddSwaggerGen(c =>
 			{
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { 
+                    Title = "My API", 
+                    Version = "v1",
+                    Description = "A simple example ASP.NET Core Web API",
+                    TermsOfService = "None",
+					Contact = new Contact { Name = "Shayne Boyer", Email = "", Url = "https://twitter.com/charliejms" },
+					License = new License { Name = "Use under LICX", Url = "https://example.com/license" }
+                
+                });
 			});
         }
 
@@ -53,7 +61,6 @@ namespace APIdotNet
 			{
 				c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
 			});
-
 
         }
     }
