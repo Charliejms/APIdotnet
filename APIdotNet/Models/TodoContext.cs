@@ -2,11 +2,21 @@
 using Microsoft;
 using MongoDB.Bson;
 using MongoDB.Driver.Core;
+using Microsoft.EntityFrameworkCore;
 
-namespace APIdotNet
+namespace TodoApi.Models
 {
-    public struct TodoContext
+    public class TodoContext : DbContext
     {
+
        
+
+        public TodoContext(DbContextOptions<TodoContext> options)
+            : base(options)
+        {
+        }
+
+       // public DbSet<TodoItem> TodoItems { get; set; }
+
     }
 }
